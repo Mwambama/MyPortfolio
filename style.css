@@ -22,6 +22,15 @@ section {
     text-align: center;
     font-size: 4rem;
     font-weight: 600;
+    margin-bottom: 1rem; /* Adjusted margin for subtitle */
+}
+
+/* New subtitle style */
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #666;
     margin-bottom: 3rem;
 }
 
@@ -201,25 +210,25 @@ header {
     color: #ff00ff;
 }
 
-/* Experience Section */
+/* Experience Section (now Skills & Expertise) */
 .experience .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted for better responsiveness */
     gap: 2rem;
 }
 
 .grid-card {
-    background-color: #fff; /* Added for contrast */
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 2.5rem 2rem; /* Adjusted padding */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0.5rem;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Consistent hover */
 }
 
 .grid-card:hover {
@@ -227,11 +236,12 @@ header {
     background-color: black;
     color: white;
     border-color: black;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Added box shadow on hover */
 }
 
 .grid-card i {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 3rem; /* Adjusted icon size */
+    margin-bottom: 1.5rem; /* Adjusted margin */
     background: linear-gradient(to right, #009dff, #ff00ff);
     background-clip: text;
     -webkit-background-clip: text;
@@ -241,6 +251,7 @@ header {
 .grid-card span {
     font-size: 1.5rem;
     font-weight: 600;
+    margin-bottom: 1rem; /* Added margin to separate from p tags */
 }
 
 .grid-card:hover span {
@@ -248,13 +259,22 @@ header {
     background: none;
 }
 
-.grid-card h3 {
-    font-weight: 300;
+/* Styles for the <p> and <strong> tags within grid-card */
+.grid-card p {
+    font-size: 0.95rem;
     color: #555;
+    line-height: 1.6;
+    text-align: left; /* Ensure text aligns left within the card */
 }
 
-.grid-card:hover h3 {
-    color: #ccc;
+.grid-card p strong {
+    font-weight: 600;
+    color: #333;
+}
+
+.grid-card:hover p,
+.grid-card:hover p strong {
+    color: #eee;
 }
 
 /* Projects Section */
@@ -265,7 +285,7 @@ header {
 }
 
 .project-card {
-    background-color: #fff; /* Added for contrast */
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 2rem;
     padding: 2rem;
@@ -379,7 +399,7 @@ footer ul li a {
     font-size: 0.9rem;
 }
 
-/* --- MOVED SCROLL BUTTON STYLES OUTSIDE OF MEDIA QUERIES --- */
+/* Scroll To Top Button */
 .scroll-top-btn {
     position: fixed;
     bottom: 2rem;
@@ -407,7 +427,6 @@ footer ul li a {
     transform: translateY(0);
 }
 
-
 /* Responsive Design */
 @media (max-width: 1024px) {
     section {
@@ -421,7 +440,7 @@ footer ul li a {
         align-items: center;
     }
     .experience .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack skill cards on smaller screens */
     }
 }
 
@@ -476,6 +495,7 @@ footer ul li a {
         font-size: 3rem;
     }
     
+    /* This rule was targeting a non-existent element in your HTML for experience, but kept for general usage */
     .experience-info img {
         width: 70vw;
     }
