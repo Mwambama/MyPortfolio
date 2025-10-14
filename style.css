@@ -22,10 +22,9 @@ section {
     text-align: center;
     font-size: 4rem;
     font-weight: 600;
-    margin-bottom: 1rem; /* Adjusted margin for subtitle */
+    margin-bottom: 1rem;
 }
 
-/* New subtitle style */
 .section-subtitle {
     text-align: center;
     font-size: 1.2rem;
@@ -139,21 +138,21 @@ header {
     cursor: pointer;
 }
 
-/* About Section */
-.about {
+/* Home Section */
+.home {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.about-container {
+.home-container {
     display: flex;
     gap: 5rem;
     align-items: center;
     justify-content: center;
 }
 
-.about img {
+.home-container img {
     width: 25vw;
     max-width: 350px;
     border-radius: 50%;
@@ -210,10 +209,34 @@ header {
     color: #ff00ff;
 }
 
-/* Experience Section (now Skills & Expertise) */
+/* New About Section Styles */
+.about {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content {
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+
+/* Skills & Expertise Section */
 .experience .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted for better responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -221,14 +244,14 @@ header {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 2rem;
-    padding: 2.5rem 2rem; /* Adjusted padding */
+    padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0.5rem;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Consistent hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid-card:hover {
@@ -236,12 +259,12 @@ header {
     background-color: black;
     color: white;
     border-color: black;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Added box shadow on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .grid-card i {
-    font-size: 3rem; /* Adjusted icon size */
-    margin-bottom: 1.5rem; /* Adjusted margin */
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
     background: linear-gradient(to right, #009dff, #ff00ff);
     background-clip: text;
     -webkit-background-clip: text;
@@ -251,7 +274,7 @@ header {
 .grid-card span {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 1rem; /* Added margin to separate from p tags */
+    margin-bottom: 1rem;
 }
 
 .grid-card:hover span {
@@ -259,12 +282,11 @@ header {
     background: none;
 }
 
-/* Styles for the <p> and <strong> tags within grid-card */
 .grid-card p {
     font-size: 0.95rem;
     color: #555;
     line-height: 1.6;
-    text-align: left; /* Ensure text aligns left within the card */
+    text-align: left;
 }
 
 .grid-card p strong {
@@ -380,13 +402,14 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem; /* Reduced gap */
 }
 
 footer ul {
     display: flex;
     align-items: center;
     gap: 3rem;
+    margin-bottom: 1rem;
 }
 
 footer ul li a {
@@ -398,6 +421,18 @@ footer ul li a {
     color: #555;
     font-size: 0.9rem;
 }
+
+/* New credit style */
+.credit {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+.credit a {
+    color: #555;
+    font-weight: 500;
+}
+
 
 /* Scroll To Top Button */
 .scroll-top-btn {
@@ -432,7 +467,7 @@ footer ul li a {
     section {
         padding: 8rem 8% 4rem;
     }
-    .about-container {
+    .home-container {
         flex-direction: column;
         text-align: center;
     }
@@ -440,7 +475,7 @@ footer ul li a {
         align-items: center;
     }
     .experience .grid {
-        grid-template-columns: 1fr; /* Stack skill cards on smaller screens */
+        grid-template-columns: 1fr;
     }
 }
 
@@ -487,17 +522,12 @@ footer ul li a {
         display: none;
     }
     
-    .about img {
+    .home-container img {
         width: 40vw;
     }
 
     .info-box h1 {
         font-size: 3rem;
-    }
-    
-    /* This rule was targeting a non-existent element in your HTML for experience, but kept for general usage */
-    .experience-info img {
-        width: 70vw;
     }
 }
 
