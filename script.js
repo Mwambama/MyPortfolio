@@ -38,4 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // links that are placeholders (href="#")
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+        
+        link.addEventListener('click', function(event) {
+            
+            event.preventDefault();
+        });
+    });
+
 });

@@ -14,10 +14,11 @@
 </head>
 <body>
     <header class="header">
-        <a href="#about" class="logo"><span>Alisala Mwamba</span></a>
+        <a href="#home" class="logo"><span>Alisala Mwamba</span></a>
         <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Skills & Expertise</a></li>
+            <li><a href="#experience">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -25,15 +26,17 @@
         <i class="fa-solid fa-bars" id="menu-icon"></i>
     </header>
 
-    <section id="about" class="about">
-        <div class="about-container">
+    <section id="home" class="home">
+        <div class="home-container">
             <img src="myPic.jpg" alt="Profile picture of Alisala Mwamba">
             <div class="info-box">
                 <div class="text">
                     <h3>Hi, I'm</h3>
                     <h1>Alisala Mwamba</h1>
                     <span>Software Engineer</span>
-                    <p class="bio">A passionate developer focused on creating intuitive and high-performance web applications. Seeking to apply my skills in a challenging and collaborative environment.</p>
+                    <p class="bio">
+                        Currently pursuing a Software Engineering degree with a minor in Applied Mathematics at Iowa State University.
+                    </p>
                 </div>
                 <div class="btn-group">
                     <a href="./Alisala_Mwamba_CV.pdf" download class="btn">Resume</a>
@@ -47,18 +50,28 @@
         </div>
     </section>
 
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>
+                Hey! I'm a student at Iowa State University with a strong focus on software engineering, distributed-data systems, and cloud-driven solutions. My experience spans full-stack development, real-time data pipelines, and API/microservices design across both academic and personal projects.
+            </p>
+            <p>
+                I’m passionate about designing secure, scalable, and data-driven applications that improve efficiency and deliver real business impact. I am currently seeking opportunities where I can contribute to enterprise-level data transformation, API-driven architectures, and cloud solutions while continuing to learn from industry leaders.
+            </p>
+        </div>
+    </section>
+
     <section id="experience" class="experience">
         <h2 class="section-title">Skills & Expertise</h2>
         <div class="grid">
-
-            <div class="grid-card">
+             <div class="grid-card">
                 <i class="fa-solid fa-desktop"></i>
                 <span>Frontend Development</span>
                 <p><strong>Languages:</strong> JavaScript, TypeScript, HTML/CSS</p>
                 <p><strong>Frameworks:</strong> React.js</p>
                 <p><strong>Tools:</strong> Tailwind CSS, Vite, Android Studio</p>
             </div>
-
             <div class="grid-card">
                 <i class="fa-solid fa-server"></i>
                 <span>Backend Development</span>
@@ -66,7 +79,6 @@
                 <p><strong>Frameworks:</strong> Express.js, FastAPI, .NET</p>
                 <p><strong>APIs & Security:</strong> REST APIs, WebSockets, JWT</p>
             </div>
-
             <div class="grid-card">
                 <i class="fa-solid fa-cloud"></i>
                 <span>Distributed Systems & Cloud</span>
@@ -74,7 +86,6 @@
                 <p><strong>Platforms:</strong> AWS (EC2, S3, RDS), Firebase</p>
                 <p><strong>DevOps:</strong> Docker, GitHub Actions (CI/CD), Linux</p>
             </div>
-
             <div class="grid-card">
                 <i class="fa-solid fa-database"></i>
                 <span>Data Engineering</span>
@@ -82,7 +93,6 @@
                 <p><strong>Concepts:</strong> ETL Pipelines, Query Optimization</p>
                 <p><strong>Tools:</strong> LangChain, Tableau</p>
             </div>
-
             <div class="grid-card">
                 <i class="fa-solid fa-microchip"></i>
                 <span>Embedded Systems</span>
@@ -90,7 +100,6 @@
                 <p><strong>Hardware:</strong> Microcontrollers (Tiva), Verilog, FPGA</p>
                 <p><strong>OS Concepts:</strong> Linux Kernel APIs, RTOS</p>
             </div>
-
         </div>
     </section>
 
@@ -121,7 +130,7 @@
                 <h3>The Hive</h3>
                 <p>A mobile-App, Tinder-style job application platform connecting students with recruiters.</p>
                 <div class="btn-group">
-                    <a href="https://www.youtube.com/watch?v=_e86lyHJ-00&list=WL&index=63&t=9s" target="_blank" class="btn">Demo</a>
+                    <a href="https://www.youtube.com/watch?v=_e86lyHJ-00" target="_blank" class="btn">Demo</a>
                     <a href="https://github.com/Mwambama/TheHive" target="_blank" class="btn">GitHub</a>
                 </div>
             </div>
@@ -148,12 +157,18 @@
 
     <footer>
         <ul>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Skills & Expertise</a></li>
+            <li><a href="#experience">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="socials">
+            <a href="https://github.com/Mwambama" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/alisala-mwamba-aaba67250/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
         <p class="copyright">© 2025 Alisala Mwamba | All rights reserved.</p>
+        <p class="credit">Inspired by the template from <a href="[YOUTUBER_CHANNEL_LINK]" target="_blank">YouTuber Name</a></p>
     </footer>
 
     <a href="#" id="scrollTopBtn" class="scroll-top-btn">
