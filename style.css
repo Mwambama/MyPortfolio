@@ -9,6 +9,10 @@
     list-style: none;
 }
 
+body {
+    background-color: #f4f4f4;
+}
+
 section {
     min-height: 100vh;
     padding: 8rem 12% 4rem;
