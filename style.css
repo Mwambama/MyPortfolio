@@ -232,6 +232,20 @@ header {
     line-height: 1.8;
 }
 
+/* Style link the about section */
+.about-content .about-link {
+    color: #333;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #009dff; /* Blue from your gradient */
+    text-decoration-thickness: 2px;
+    transition: color 0.3s ease;
+}
+
+.about-content .about-link:hover {
+    color: #ff00ff; /* Magenta from your gradient on hover */
+}
+
 
 /* Skills & Expertise Section */
 .experience .grid {
