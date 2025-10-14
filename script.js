@@ -20,4 +20,25 @@ document.addEventListener('DOMContentLoaded', () => {
     //     });
     // });
 
+    // Get the button element by its ID
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    // Show/hide button based on scroll position
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollTopBtn.classList.add("show");
+        } else {
+            scrollTopBtn.classList.remove("show");
+        }
+    };
+
+    // Scrolls when button is clicked
+    scrollTopBtn.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevents the default anchor tag behavior
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
 });

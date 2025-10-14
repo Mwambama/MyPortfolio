@@ -463,4 +463,38 @@ footer ul li a {
     .project-card {
         padding: 1.5rem;
     }
+
+
+/* SCROLL TO TOP BUTTON */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(to right, #ff00ff, #009dff);
+    color: white;
+
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    /* END OF CHANGES */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+    
+    /* Animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+/* used by JavaScript to show the button */
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 }
